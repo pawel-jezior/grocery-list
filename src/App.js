@@ -7,7 +7,6 @@ const App = () => {
   //todo: dorobic przycisk do czyszczenia listy produktow
   //todo: przy kazdym produkcie przycisk do usuwania go
   //todo: klikniecie na produkt zaznacza, ze jest zielony lub bialy, domyslnie bialy (oznacza, ze jeszcze nie kupione)
-  //todo: automatyczne usuwanie duplikatow ze storage
 
   const addNewProductToStorage = (e) => {
     if (textInput.current.value !== "") {
@@ -38,6 +37,10 @@ const App = () => {
 
   const refresh = () => {window.location.reload(false)}
 
+  const deleteExistingListFromStorage = () => {
+    localStorage.removeItem("productList")
+  }
+
   return (
     <div className="app">
       <form className="app__enterProduct">
@@ -52,6 +55,11 @@ const App = () => {
       >
         SUBMIT
       </button>
+      <button className="app__newList"
+        onClick={() => {
+          deleteExistingListFromStorage();
+          refresh();
+        }}>Nowa lista</button>
       <ProductList/>
     </div>
   );
