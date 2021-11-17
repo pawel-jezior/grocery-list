@@ -4,7 +4,6 @@ import ProductList from "./components/ProductList";
 const App = () => {
   const textInput = React.createRef();
 
-  //todo: dorobic przycisk do czyszczenia listy produktow
   //todo: przy kazdym produkcie przycisk do usuwania go
   //todo: klikniecie na produkt zaznacza, ze jest zielony lub bialy, domyslnie bialy (oznacza, ze jeszcze nie kupione)
 
