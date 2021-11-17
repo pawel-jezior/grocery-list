@@ -13,8 +13,10 @@ const App = () => {
     if (textInput.current.value !== "") {
       if (getProductListFromStorage()) {
         const productListFromStorage = getProductListFromStorage().split(",");
-        productListFromStorage.push(textInput.current.value);
+        if (productListFromStorage.indexOf(textInput.current.value) == -1){
+          productListFromStorage.push(textInput.current.value);
         saveProductListToStorage(productListFromStorage);
+        } 
       } else {
         saveProductListToStorage(textInput.current.value);
       }
@@ -35,7 +37,7 @@ const App = () => {
   };
 
   const refresh = () => {window.location.reload(false)}
-  
+
   return (
     <div className="app">
       <form className="app__enterProduct">
