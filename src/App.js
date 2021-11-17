@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProductList from "./components/ProductList";
 
 const App = () => {
@@ -34,6 +34,8 @@ const App = () => {
     return localStorage.getItem("productList");
   };
 
+  const refresh = () => {window.location.reload(false)}
+  
   return (
     <div className="app">
       <form className="app__enterProduct">
@@ -43,6 +45,7 @@ const App = () => {
         className="app__submitProduct"
         onClick={() => {
           addNewProductToStorage();
+          refresh();
         }}
       >
         SUBMIT
