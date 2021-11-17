@@ -1,1 +1,17 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
 
+.app__enterProduct, .app__submitProduct{
+  margin: 10px;
+}
+
+.productListContainter__list--element {
+  height: 30px;
+  width: 150px;
+  background: pink;
+  margin: 10px;
+}
