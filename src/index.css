@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 html {
-  background: rgb(100, 125, 194);
   box-sizing: border-box;
-}
+  background: #fff}
 
 *,
 *:before,
@@ -13,10 +12,6 @@ html {
 
 *:focus {
   outline: none;
-}
-
-div#root {
-  background: rgb(44, 63, 116);
 }
 
 .app {
@@ -30,6 +25,7 @@ div#root {
 }
 
 .app__enterProduct--input {
+  background: navajowhite;
   height: 60px;
   width: 100%;
   text-align: center;
@@ -39,6 +35,7 @@ div#root {
   font-family: "Varela Round", sans-serif;
   font-weight: 600;
   font-size: large;
+  
 }
 
 .app__firstSection {
@@ -48,6 +45,7 @@ div#root {
 
 .app__newList {
   background: violet;
+  color: #fff;
   border: none;
   border-radius: 10px;
   margin: 8px 8px 8px 0px;
@@ -57,11 +55,8 @@ div#root {
   font-weight: 600;
 }
 
-.app__secondSection {
-}
-
 .app__submitProduct {
-  background: #00cc00 url("./images/plus.svg") center no-repeat;
+  background: #3eeb5b url("./images/plus.svg") center no-repeat;
   background-size: 40px 40px;
   border: none;
   border-radius: 10px;
@@ -76,7 +71,7 @@ div#root {
 }
 
 .productListContainter__list--element {
-  background: pink;
+  background: mistyrose;
   margin: 0px 8px 8px 8px;
   padding: 10px 10px 10px 20px;
   display: flex;

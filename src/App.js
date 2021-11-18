@@ -54,6 +54,7 @@ const App = () => {
           ref={textInput}
           type="text"
           placeholder="Wprowadź produkt"
+          maxLength="50"
         />
       </form>
       <button
