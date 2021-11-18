@@ -20,10 +20,10 @@
       "purpose": "maskable any"
     }
   ],
-  "scope": "/grocery-list/",
-  "start_url": "/grocery-list/",
   "display": "standalone",
   "orientation": "portrait",
+  "scope": "/grocery-list/",
+  "start_url": "/grocery-list/",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
