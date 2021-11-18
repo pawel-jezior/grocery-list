@@ -52,7 +52,7 @@ const App = () => {
           className="app__enterProduct--input"
           ref={textInput}
           type="text"
-          placeholder="Wprowadź produkt"
+          placeholder="Produkt"
           maxLength="50"
         />
       </form>
