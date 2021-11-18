@@ -4,7 +4,6 @@ import ProductList from "./components/ProductList";
 const App = () => {
   const textInput = React.createRef();
 
-  //todo: mozliwosc instalacji na telefonie
   //todo: update plik readme
   //todo: update description
   //todo: uzywac ;)
@@ -53,7 +52,7 @@ const App = () => {
           ref={textInput}
           type="text"
           placeholder="Produkt"
-          maxLength="50"
+          maxLength="20"
         />
       </form>
       <button
