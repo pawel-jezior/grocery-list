@@ -26,9 +26,7 @@ if (localStorage.getItem("productList")) {
           deleteThisProduct(product);
           refresh();
         }}
-      >
-        usuń
-      </button>
+      ></button>
     </li>
   ));
 }

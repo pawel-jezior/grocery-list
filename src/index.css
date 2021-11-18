@@ -1,17 +1,102 @@
-.app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+html {
+  background: rgb(100, 125, 194);
+  box-sizing: border-box;
 }
 
-.app__enterProduct, .app__submitProduct{
-  margin: 10px;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+div#root {
+  background: rgb(44, 63, 116);
+}
+
+.app {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  font-size: large;
+}
+
+.app__enterProduct {
+  margin: 8px 0px 8px 8px;
+}
+
+.app__enterProduct--input {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+  font-size: large;
+}
+
+.app__firstSection {
+  display: grid;
+  grid-template-columns: 70% 20% 10%;
+}
+
+.app__newList {
+  background: violet;
+  border: none;
+  border-radius: 10px;
+  margin: 8px 8px 8px 0px;
+  min-width: 50px;
+  min-height: 50px;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+}
+
+.app__secondSection {
+}
+
+.app__submitProduct {
+  background: #00cc00 url("./images/plus.svg") center no-repeat;
+  background-size: 40px 40px;
+  border: none;
+  border-radius: 10px;
+  margin: 8px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.productListContainter__list {
+  padding: 0;
+  margin-top: 0;
 }
 
 .productListContainter__list--element {
-  height: 30px;
-  width: 150px;
   background: pink;
-  margin: 10px;
+  margin: 0px 8px 8px 8px;
+  padding: 10px 10px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  color: black;
+}
+
+.productListContainter__list--element-deleteButton {
+  background: rgba(220, 20, 60, 0) url("./images/cross.svg") center no-repeat;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+@media (max-width: 580px) {
+  .app__firstSection {
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+  }
 }

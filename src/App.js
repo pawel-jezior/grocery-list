@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ProductList from "./components/ProductList";
 
 const App = () => {
   const textInput = React.createRef();
 
-  //todo: refaktoryzacja, szczeoglnie funkcje, DRY
   //todo: css
   //todo: mozliwosc instalacji na telefonie
   //todo: update plik readme
@@ -48,8 +47,14 @@ const App = () => {
 
   return (
     <div className="app">
-      <form className="app__enterProduct">
-        <input className="app__enterProduct--input" ref={textInput} type="text" placeholder="Wprowadź produkt" />
+      <div className="app__firstSection">
+       <form className="app__enterProduct">
+        <input
+          className="app__enterProduct--input"
+          ref={textInput}
+          type="text"
+          placeholder="Wprowadź produkt"
+        />
       </form>
       <button
         className="app__submitProduct"
@@ -57,9 +62,7 @@ const App = () => {
           addNewProductToStorage();
           refresh();
         }}
-      >
-        SUBMIT
-      </button>
+      ></button>
       <button
         className="app__newList"
         onClick={() => {
@@ -67,9 +70,12 @@ const App = () => {
           refresh();
         }}
       >
-        Nowa lista
-      </button>
-      <ProductList />
+        NEW
+      </button> 
+      </div>
+      <div className="app__secondSection">
+        <ProductList />
+      </div>
     </div>
   );
 };
