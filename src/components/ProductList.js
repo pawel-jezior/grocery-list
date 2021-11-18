@@ -1,14 +1,14 @@
 let producListFromStorageArray = [];
 
 const deleteThisProduct = (product) => {
-  const arrayyyyy = localStorage.getItem("productList").split(",");
+  const tempArray = localStorage.getItem("productList").split(",");
 
-  const index = arrayyyyy.indexOf(product);
+  const index = tempArray.indexOf(product);
   console.log(index);
   if (index > -1) {
-    arrayyyyy.splice(index, 1);
+    tempArray.splice(index, 1);
   }
-  localStorage.setItem("productList", arrayyyyy);
+  localStorage.setItem("productList", tempArray);
 };
 
 const refresh = () => {

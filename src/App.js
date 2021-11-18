@@ -4,17 +4,21 @@ import ProductList from "./components/ProductList";
 const App = () => {
   const textInput = React.createRef();
 
-  //todo: przy kazdym produkcie przycisk do usuwania go
-  //todo: klikniecie na produkt zaznacza, ze jest zielony lub bialy, domyslnie bialy (oznacza, ze jeszcze nie kupione)
+  //todo: refaktoryzacja, szczeoglnie funkcje, DRY
+  //todo: css
+  //todo: mozliwosc instalacji na telefonie
+  //todo: update plik readme
+  //todo: update description
+  //todo: uzywac ;)
 
   const addNewProductToStorage = (e) => {
     if (textInput.current.value !== "") {
       if (getProductListFromStorage()) {
         const productListFromStorage = getProductListFromStorage().split(",");
-        if (productListFromStorage.indexOf(textInput.current.value) == -1){
+        if (productListFromStorage.indexOf(textInput.current.value) == -1) {
           productListFromStorage.push(textInput.current.value);
-        saveProductListToStorage(productListFromStorage);
-        } 
+          saveProductListToStorage(productListFromStorage);
+        }
       } else {
         saveProductListToStorage(textInput.current.value);
       }
@@ -34,16 +38,18 @@ const App = () => {
     return localStorage.getItem("productList");
   };
 
-  const refresh = () => {window.location.reload(false)}
+  const refresh = () => {
+    window.location.reload(false);
+  };
 
   const deleteExistingListFromStorage = () => {
-    localStorage.removeItem("productList")
-  }
+    localStorage.removeItem("productList");
+  };
 
   return (
     <div className="app">
       <form className="app__enterProduct">
-        <input ref={textInput} type="text" placeholder="Wprowadź produkt" />
+        <input className="app__enterProduct--input" ref={textInput} type="text" placeholder="Wprowadź produkt" />
       </form>
       <button
         className="app__submitProduct"
@@ -54,12 +60,16 @@ const App = () => {
       >
         SUBMIT
       </button>
-      <button className="app__newList"
+      <button
+        className="app__newList"
         onClick={() => {
           deleteExistingListFromStorage();
           refresh();
-        }}>Nowa lista</button>
-      <ProductList/>
+        }}
+      >
+        Nowa lista
+      </button>
+      <ProductList />
     </div>
   );
 };
