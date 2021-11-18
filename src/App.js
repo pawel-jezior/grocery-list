@@ -4,7 +4,6 @@ import ProductList from "./components/ProductList";
 const App = () => {
   const textInput = React.createRef();
 
-  //todo: css
   //todo: mozliwosc instalacji na telefonie
   //todo: update plik readme
   //todo: update description
