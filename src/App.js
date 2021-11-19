@@ -4,10 +4,6 @@ import ProductList from "./components/ProductList";
 const App = () => {
   const textInput = React.createRef();
 
-  //todo: update plik readme
-  //todo: update description
-  //todo: uzywac ;)
-
   const addNewProductToStorage = (e) => {
     if (textInput.current.value !== "") {
       if (getProductListFromStorage()) {
@@ -46,31 +42,31 @@ const App = () => {
   return (
     <div className="app">
       <div className="app__firstSection">
-       <form className="app__enterProduct">
-        <input
-          className="app__enterProduct--input"
-          ref={textInput}
-          type="text"
-          placeholder="Produkt"
-          maxLength="20"
-        />
-      </form>
-      <button
-        className="app__submitProduct"
-        onClick={() => {
-          addNewProductToStorage();
-          refresh();
-        }}
-      ></button>
-      <button
-        className="app__newList"
-        onClick={() => {
-          deleteExistingListFromStorage();
-          refresh();
-        }}
-      >
-        NEW
-      </button> 
+        <form className="app__enterProduct">
+          <input
+            className="app__enterProduct--input"
+            ref={textInput}
+            type="text"
+            placeholder="Produkt"
+            maxLength="20"
+          />
+        </form>
+        <button
+          className="app__submitProduct"
+          onClick={() => {
+            addNewProductToStorage();
+            refresh();
+          }}
+        ></button>
+        <button
+          className="app__newList"
+          onClick={() => {
+            deleteExistingListFromStorage();
+            refresh();
+          }}
+        >
+          NEW
+        </button>
       </div>
       <div className="app__secondSection">
         <ProductList />
